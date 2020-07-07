@@ -1,0 +1,135 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Ownest-Signup</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="Quick Register Form Responsive, Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<link href="{% static 'css/signup-font-awesome.min.css' %}" rel="stylesheet" type="text/css" media="all">
+<link href="{% static 'css/signup-style.css' %}" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body>
+<div class="signupform">
+<h1>Ownest Register Form</h1>
+	<div class="container">
+		<form method="POST" enctype="multipart/form-data" >
+            {% csrf_token %}
+			<div class="agile_info">
+				<div class="w3_info">
+					<div class="left margin">
+						<h2>Register Here</h2>
+					</div>
+					<div class="left">						
+					</div>
+					<div class="left margin">
+						<label>First Name</label>
+						<div class="input-group">
+							<span><i class="fa fa-user" aria-hidden="true"></i></span>
+							<input type="text" placeholder="First Name" name="firstname">
+						</div>
+					</div>
+					<div class="left">
+						<label>Last Name</label>
+						<div class="input-group">
+							<span><i class="fa fa-user" aria-hidden="true"></i></span>
+							<input type="text" placeholder="Last Name" name="lastname">
+						</div>
+					</div>
+					<div class="left margin">
+						<label>Email Address</label>
+						<div class="input-group">
+							<span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+							<input type="email" placeholder="Email" name="email_id">
+						</div>
+					</div>
+					<div class="left">
+						<label>Phone Number</label>
+						<div class="input-group">
+							<span><i class="fa fa-phone" aria-hidden="true"></i></span>
+							<input type="text" placeholder="Phone Number" name="phone_number">
+						</div>
+					</div>
+					<div class="left margin">
+						<label>Password</label>
+						<div class="input-group">
+							<span><i class="fa fa-lock" aria-hidden="true"></i></span>
+							<input type="Password" placeholder="Password" name="paswd">
+						</div>
+					</div>
+					<div class="left">
+						<label>Confirm Password</label>
+						<div class="input-group">
+							<span><i class="fa fa-lock" aria-hidden="true"></i></span>
+							<input type="Password" placeholder="Confirm Password" name="c_pswd">
+						</div>
+					</div>
+					<div class="left margin">
+							<i class="fa fa-user" aria-hidden="true"></i>
+							<input type="radio" name="user_type" value="normal_user" id="nu">Normal user<br>
+
+					</div>
+					<div class="left">
+							<i class="fa fa-user" aria-hidden="true"></i>
+							<input type="radio" name="user_type" value="management_user" id="bu">Parking management user<br>
+					</div>
+					
+					<div class="clear"></div>
+
+					<h4><input type="checkbox" value="remember-me" /> I agree to the terms & contidions </h4>  					
+					<div class="left margin">
+						<input class="btn btn-danger btn-block" type="submit" value="Submit" >
+					</div>    
+					<div class="left">
+						<button class="btn btn-danger btn-block" > <a href="#">HOME</a> <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button >
+					</div>   
+				</div>
+
+				<div class="w3l_form" id="side1">
+					<div class="left_grid_info">
+						<h3>Give  Job profile Details</h3>
+						<p>Such as job profile information and other essential inforamation , we will verfiy it  </p>
+						<textarea rows="10" cols="39">
+						</textarea>
+						
+					</div>
+				</div>
+
+				<div class="w3l_form" id="side2">
+					<div class="left_grid_info" >
+						<h3>Already Registered?</h3>
+						<a href="#" class="btn">Login <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="footer">
+			</div>
+		</form>	
+
+		<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+
+		<script>
+			
+			$("#bu").click(function() {
+				$("#side1").fadeIn(-10000);
+				$("#side2").fadeOut(-10000);
+			});
+			$("#nu").click(function() {
+				$("#side2").fadeIn(-10000);
+				$("#side1").fadeOut(-10000);
+			});
+
+		</script>
+
+ <p>&copy; 2020 signup form. All Rights Reserved | Design by sachu </p>
+ </div>
+	</div>
+	</body>
+</html>

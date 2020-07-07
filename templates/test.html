@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>first Name</label>
+    <input type="text" name="firstname"><br>
+    <label>last Name</label>
+    <input type="text" name="lastname"><br>
+
+    <label>Email</label>
+    <input type="text" name="email_id"><br>
+    <label>Password</label>
+    <input type="text" name="password"><br>
+    <label>Confirm-Password</label>
+    <input type="text" name="confirmpassword"> <br>
+    <label>City</label>
+    <input type="text" name="city"><br>
+    <label>ASDREEAA</label>
+    <input type="text" name="address"><br>
+    <label>USER TYPE</label><br>
+    <label>Normal user</label>
+    <input type="radio" value="normal user" name="usertype"><br>
+    <label>maanagement user</label><br>
+    <input type="radio" value="normal user" name="usertype"><br>
+    <input type="submit" VALUE="SUBMIT">
+</form>
+
+</body>
+</html>
