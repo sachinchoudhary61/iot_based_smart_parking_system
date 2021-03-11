@@ -1,5 +1,6 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse,redirect
 from Applicationuser.form import ApplicationuserForm
+from .form import *
 # Create your views here.
 from miscellaneous import otp_sending
 
@@ -24,3 +25,19 @@ def signup(request):
         # f.save()
         # HttpResponse("done")
     return render(request, 'test.html')
+
+
+def hotel_image_view(request):
+    if request.method == 'POST':
+        form = HotelForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            form.save()
+            return redirect('success')
+    else:
+        form = HotelForm()
+    return render(request, 'imagetest.html', {'form': form})
+
+
+def success(request):
+    return HttpResponse('successfully uploaded')
