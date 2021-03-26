@@ -33,7 +33,7 @@ PyQRCode==1.2.1
 python-dateutil==2.8.0
 python-editor==1.0.4
 pytz==2019.3
-PyYAML==5.1.2
+PyYAML==5.4
 requests==2.22.0
 six==1.13.0
 soupsieve==2.0.1
